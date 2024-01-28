@@ -1,0 +1,72 @@
+body{
+    background-image: url('images/back.jpg'); /* Use forward slashes */
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    border-width: thick;
+    border-radius: 20px; /* Rounded corners */
+    border-color: black;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    padding: 20px 0; /* Adjust padding for top and bottom */
+    background-color:#d9ecca;
+  }
+  
+  h1{
+    text-align: center; /* Center the text */
+    font-family: cursive; /* Set the font-family to cursive */
+    font-weight: bold; /* Make the text bold */
+    margin-top: 0; /* Remove default margin from the top */
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center form content */
+    width: 70%; /* Set form width */
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%; /* Full width for inputs and textarea */
+  }
+  
+  input[type="submit"] {
+    width: 100%; /* Full width for the submit button */
+    margin-top: 16px; /* Adjust top margin */
+  }
+  
+  /* Apply rounded corners to the form elements */
+  input[type="text"],
+  textarea{
+    border-radius: 10px; /* Adjust the border radius */
+    padding: 12px; /* Padding for form elements */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  input[type="submit"]{
+    border-radius: 30px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    width: 40%;
+
+
+  }
+  
+  /* Darker green color on submit button hover */
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Additional styling for labels */
+  label {
+    margin-bottom: 6px; /* Add some space between labels and inputs */
+  }
+  

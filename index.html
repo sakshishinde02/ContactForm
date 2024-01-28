@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+          <label for="email">Email</label>
+          <input type="text" id="email" name="Email" placeholder="" required>
+      
+          <label for="subject">Message</label>
+          <textarea id="subject" name="subject" placeholder="Drop your Message here.." style="height:200px" required></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <script src=" https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail(){
+            Email.send({
+              Host : "smtp.gmail.com",
+              Username : "username",
+              Password : "password",
+              To : "",
+              From : document.getElementById("email").value,
+              Subject : "new Enquiry",
+              Body : "First Name: "+ document.getElementById("fname").value
+              + "<br> Last Name: "+ document.getElementById("lname").value
+              + "<br> Email: "+ document.getElementById("email").value
+              + "<br> Message "+ document.getElementById("subject").value
+        }).then(
+          message => alert("Message Sent Sucessfully")
+        );
+
+        }
+      </script>
+</body>
+</html>
